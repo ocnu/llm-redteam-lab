@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# garak's default .garak.core.yaml / cache can contain local paths — review
+# before adding, don't commit blindly
+.garak/
+
+# Raw garak reports contain the model's actual completions to attack prompts
+# (jailbroken / toxic output). Publish the SUMMARIZED findings tables instead,
+# generated via scripts/summarize_report.py. Keep raw reports local.
+garak/reports/*.report.jsonl
+garak/reports/*.report.html
+garak/reports/*.jsonl
+garak/reports/*.html
